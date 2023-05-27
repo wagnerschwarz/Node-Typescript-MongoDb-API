@@ -6,3 +6,17 @@ yarn add -D tsc typescript ts-node
 yarn add -D nodemon
 
 npx tsc --init
+
+yarn add -D eslint prettier eslint-config-prettier
+
+npx eslint --init
+1 - To check syntax and find problems
+2 - JavaScript modules (import/export)
+3 - None of these
+4 - Yes
+5 - marcar apenas Node
+6 - JSON
+7 - Yes
+8 - Yarn
+
+
