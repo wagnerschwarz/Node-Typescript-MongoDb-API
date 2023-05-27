@@ -26,3 +26,4 @@ feat: quando foi criado algo novo
 
 yarn add express
 yarn add -D @types/express @types/node
+yarn add -D dotenv
