@@ -19,4 +19,10 @@ npx eslint --init
 7 - Yes
 8 - Yarn
 
+git commits convecionais (boa pratica)
+chore: quando foi mexido em setup/configs do projeto
+fix: quando foi ajustado algum bug
+feat: quando foi criado algo novo
 
+yarn add express
+yarn add -D @types/express @types/node
