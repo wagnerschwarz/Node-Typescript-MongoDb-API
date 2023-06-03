@@ -9,8 +9,10 @@ export const MongoClient = {
     const username = process.env.MONGODB_USERNAME;
     const password = process.env.MONGODB_PASSWORD;
 
+    //connection string do banco (url/usuario/senha)
     const client = new Mongo(url, { auth: { username, password } });
-    const db = client.db("users-db");
+    //nome do banco que possui as collections
+    const db = client.db("test");
 
     this.client = client;
     this.db = db;

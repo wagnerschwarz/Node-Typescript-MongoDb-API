@@ -5,7 +5,9 @@ import { MongoGetUsersRepository } from "./repositories/get-users/mongo-get-user
 import { MongoClient } from "./database/mongo";
 
 const main = async () => {
+  //config = dotEnv permite usar as variaveis ambientes da aplicacao (logical name)
   config();
+  //express = metodos da API (Get/Post/Put...etc )
   const app = express();
   await MongoClient.connect();
 
