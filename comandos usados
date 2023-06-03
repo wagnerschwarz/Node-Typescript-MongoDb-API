@@ -29,3 +29,6 @@ yarn add -D @types/express @types/node
 yarn add -D dotenv
 
 yarn add mongodb
+
+yarn add validator (valida se email é valido asd@gmail.com)
+yarn add -D @types/validator
