@@ -5,6 +5,8 @@ import { MongoGetUsersRepository } from "./repositories/get-users/mongo-get-user
 import { MongoClient } from "./database/mongo";
 import { MongoCreateUserRepository } from "./repositories/create-user/mongo-create-user";
 import { CreateUserController } from "./controllers/create-user/create-user";
+import { UpdateUserController } from "./controllers/update-user/update-user";
+import { MongoUpdateUserRepository } from "./repositories/update-user/mongo-update-user";
 
 const main = async () => {
   //config = dotEnv permite usar as variaveis ambientes da aplicacao (logical name)
@@ -37,6 +39,21 @@ const main = async () => {
     const { body, statusCode } = await createUserController.handle({
       body: req.body,
     });
+    res.status(statusCode).send(body);
+  });
+
+  //PATCH Atualiza usuarios no banco
+  app.patch("/users/:id", async (req, res) => {
+    const mongoUpdateUserRepository = new MongoUpdateUserRepository();
+    const updateUserController = new UpdateUserController(
+      mongoUpdateUserRepository
+    );
+
+    const { body, statusCode } = await updateUserController.handle({
+      body: req.body,
+      params: req.params,
+    });
+
     res.status(statusCode).send(body);
   });
 
