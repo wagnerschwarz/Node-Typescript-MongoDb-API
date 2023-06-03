@@ -28,4 +28,4 @@ yarn add express
 yarn add -D @types/express @types/node
 yarn add -D dotenv
 
-docker-compose up -d
+yarn add mongodb
